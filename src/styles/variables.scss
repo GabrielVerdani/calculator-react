@@ -1,0 +1,29 @@
+/* Colors */
+$mirage: #1B2430;
+$comet: #51557E;
+$trendy-pink: #816797;
+$akaroa: #D6D5A8;
+$white: #fff;
+$black: #000;
+$bunker: #090c10;
+$white-rock: #efeedc;
+
+/* Components */
+$background-light: $white-rock;
+$background-dark: $bunker;
+$visor-background: $mirage;
+$visor-font-color: $white;
+$visor-small-number-font-color: $akaroa;
+$buttons-container: $akaroa;
+$button-font-color: $white;
+$number-button-background: $comet;
+$action-button-background: $trendy-pink;
+
+$buttons-container-dark: $comet;
+$number-button-font-color-dark: $comet;
+$number-button-background-dark: $akaroa;
+
+/* Font sizes */
+$button-font-size: 1.7rem;
+$visor-big-number-size: 2.5rem;
+$visor-small-number-size: 1rem;
