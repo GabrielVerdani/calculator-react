@@ -16,7 +16,6 @@ export function Calculator({isDarkMode}: ICalculatorProps) {
     const [isAfterOperation, setIsAfterOperation] = useState(false);
     const [isAfterEqual, setIsAfterEqual] = useState(false);
 
-
     const handleButtonClick = (button: string) => {
         switch (button) {
             case "addition":
@@ -53,13 +52,6 @@ export function Calculator({isDarkMode}: ICalculatorProps) {
     }
 
     const handleOtherButtons = (button: string) => {
-        if(button == "." && currentNumber.includes(".")) {
-            return;
-        }
-        if(currentNumber == "0" && button != ".") {
-            setCurrentNumber(button);
-            return;
-        }
         if(isAfterOperation) {
             setIsAfterOperation(false);
             if(button == ".") {
@@ -71,6 +63,13 @@ export function Calculator({isDarkMode}: ICalculatorProps) {
             }
             setCurrentNumber(button);
             return
+        }
+        if(currentNumber == "0" && button != ".") {
+            setCurrentNumber(button);
+            return;
+        }
+        if(button == "." && currentNumber.includes(".")) {
+            return;
         }
         if(currentNumber.length >= 11) {
             let newNumber = currentNumber.substring(1) + button;
